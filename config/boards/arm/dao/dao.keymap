@@ -11,16 +11,13 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
-#define ADJ 3
 
 &lt { quick_tap_ms = <200>; };
-
 &mt { quick_tap_ms = <200>; };
 
 / {
     chosen {
         zmk,matrix_transform = &default_transform;
-
         // zmk,matrix_transform = &extra_keys_transform;
     };
 };
@@ -31,28 +28,28 @@
 
         default_layer {
             bindings = <
-  &mt LGUI LEFT_BRACKET       &kp SINGLE_QUOTE  &kp COMMA  &kp DOT    &kp P         &kp Y            &kp F            &kp G            &kp C      &kp R  &kp L  &mt RGUI RIGHT_BRACKET
-  &mt LCTRL NON_US_BACKSLASH  &kp A             &kp O      &kp E      &kp U         &kp I            &kp D            &kp H            &kp T      &kp N  &kp S  &mt RCTRL MINUS
-  &mt LALT SLASH              &kp SEMICOLON     &kp Q      &kp J      &kp K         &kp X            &kp B            &kp M            &kp W      &kp V  &kp Z  &mt RALT EQUAL
-                                                           &lt 2 TAB  &lt 1 ESCAPE  &mt LSHFT RET    &mt RSHFT SPACE  &lt 1 BACKSPACE  &lt 2 DEL
+  &lt 2 GRAVE      &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J          &kp L      &kp U         &kp Y       &kp SEMICOLON  &mt RGUI NON_US_BACKSLASH
+  &mt LCTRL MINUS  &kp A  &kp R  &kp S      &kp T          &kp G            &kp M          &kp N      &kp E         &kp I       &kp O          &mt RCTRL SQT
+  &mt LALT EQUAL   &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K          &kp H      &kp COMMA     &kp PERIOD  &kp SLASH      &kp RALT
+                                 &lt 1 TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt 1 ESCAPE
             >;
         };
 
         lower_layer {
             bindings = <
-  &kp LEFT_WIN  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp N9  &kp PLUS     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp GRAVE      &kp TILDE        &kp CARET    &kp RIGHT_WIN
-  &kp LCTRL     &kp SLASH     &kp N4        &kp NUMBER_5  &kp N6  &kp MINUS    &kp LEFT_ARROW        &kp DOWN_ARROW         &kp UP_ARROW   &kp RIGHT_ARROW  &kp PERCENT  &kp RCTRL
-  &kp LALT      &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp N3  &kp DOT      &kp DOLLAR            &kp EXCL               &kp AMPERSAND  &kp HASH         &kp AT_SIGN  &kp RALT
-                                            &trans        &trans  &trans       &trans                &trans                 &trans
+  &kp LEFT_WIN  &kp CARET  &kp NUMBER_7  &kp NUMBER_8  &kp N9         &kp PERCENT    &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp AT           &kp PAGE_UP      &kp RIGHT_WIN
+  &kp LCTRL     &kp ASTRK  &kp N4        &kp NUMBER_5  &kp N6         &kp HASH       &kp LEFT_ARROW         &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp EXCLAMATION  &kp RCTRL
+  &kp LALT      &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp N3         &kp DOLLAR     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp AMPERSAND    &kp PAGE_DOWN    &kp RALT
+                                         &trans        &kp BACKSPACE  &kp RET        &kp DEL                &kp SPACE          &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6         &kp F7        &kp F8    &kp F9    &kp F10    &kp F11          &kp F12
-  &kp LCTRL  &none      &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS    &kp C_MUTE    &kp LEFT  &kp UP    &kp RIGHT  &kp INS          &kp RCTRL
-  &kp LALT   &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT     &kp C_VOL_DN  &kp END   &kp DOWN  &kp PG_DN  &kp PAUSE_BREAK  &kp RALT
-                                   &trans     &trans     &trans         &trans        &trans    &trans
+  &trans       &none   &none   &none   &none   &none     &none       &none   &none   &none    &none    &trans
+  &kp LCTRL    &none   &none   &none   &none   &none     &none  &none   &none   &none    &none    &kp RCTRL
+  &mt LALT F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7      &kp F8  &kp F9  &kp F10  &kp F11  &mt RALT F12
+          &kp TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &kp ESCAPE
             >;
         };
     };
