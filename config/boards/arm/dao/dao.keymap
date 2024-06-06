@@ -28,7 +28,7 @@
 
         default_layer {
             bindings = <
-  &lt 2 GRAVE      &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J          &kp L      &kp U         &kp Y       &kp SEMICOLON  &lt 2 NON_US_BACKSLASH
+  &lt 2 GRAVE      &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J          &kp L      &kp U         &kp Y       &kp SEMICOLON  &lt 2 BACKSLASH
   &mt LCTRL MINUS  &kp A  &kp R  &kp S      &kp T          &kp G            &kp M          &kp N      &kp E         &kp I       &kp O          &mt RCTRL SQT
   &mt LALT EQUAL   &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K          &kp H      &kp COMMA     &kp PERIOD  &kp SLASH      &kp RALT
                                  &lt 1 TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt 1 ESCAPE
