@@ -28,28 +28,28 @@
 
         default_layer {
             bindings = <
-  &lt 2 GRAVE      &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J          &kp L      &kp U         &kp Y       &kp SEMICOLON  &lt 2 BACKSLASH
-  &mt LCTRL MINUS  &kp A  &kp R  &kp S      &kp T          &kp G            &kp M          &kp N      &kp E         &kp I       &kp O          &mt RCTRL SQT
-  &mt LALT EQUAL   &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K          &kp H      &kp COMMA     &kp PERIOD  &kp SLASH      &kp RALT
+  &mt LALT GRAVE   &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J             &kp L      &kp U      &kp Y       &kp SEMICOLON  &lt 2 BACKSLASH
+  &mt LCTRL MINUS  &kp A  &kp R  &kp S      &kp T          &kp G            &kp M             &kp N      &kp E      &kp I       &kp O          &mt RCTRL SQT
+  &lt 2 EQUAL      &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K             &kp H      &kp COMMA  &kp PERIOD  &kp SLASH      &kp RALT
                                  &lt 1 TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt 1 ESCAPE
             >;
         };
 
         lower_layer {
             bindings = <
-  &kp LEFT_WIN  &kp CARET  &kp NUMBER_7  &kp NUMBER_8  &kp N9         &kp PERCENT    &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp AT           &kp PAGE_UP      &kp RIGHT_WIN
-  &kp LCTRL     &kp ASTRK  &kp N4        &kp NUMBER_5  &kp N6         &kp HASH       &kp LEFT_ARROW         &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp EXCLAMATION  &kp RCTRL
-  &kp LALT      &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp N3         &kp DOLLAR     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp AMPERSAND    &kp PAGE_DOWN    &kp RALT
-                                         &trans        &kp BACKSPACE  &kp RET        &kp DEL                &kp SPACE          &trans
+  &kp LALT          &kp CARET  &kp NUMBER_7  &kp NUMBER_8  &kp N9         &kp PERCENT    &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE   &kp AT           &kp PAGE_UP      &kp RIGHT_COMMAND
+  &kp LCTRL         &kp ASTRK  &kp N4        &kp NUMBER_5  &kp N6         &kp HASH       &kp LEFT_ARROW         &kp DOWN_ARROW     &kp UP_ARROW     &kp RIGHT_ARROW  &kp EXCLAMATION  &kp RCTRL
+  &kp LEFT_COMMAND  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp N3         &kp DOLLAR     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp AMPERSAND    &kp PAGE_DOWN    &kp RALT
+                                             &trans        &kp BACKSPACE  &kp RET        &kp DEL                &kp SPACE          &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &trans       &none   &none   &none   &none   &none     &none       &none   &none   &none    &none    &trans
-  &kp LCTRL    &none   &none   &none   &none   &none     &none  &none   &none   &none    &none    &kp RCTRL
-  &mt LALT F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7      &kp F8  &kp F9  &kp F10  &kp F11  &mt RALT F12
-          &kp TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &kp ESCAPE
+  &kp LALT     &none  &kp F7  &kp F8   &kp F9         &kp F10          &none          &none      &none       &none  &none  &trans
+  &kp LCTRL  &none  &kp F4  &kp F5   &kp F6         &kp F11          &none          &none      &none       &none  &none  &kp RCTRL
+  &trans   &none  &kp F1  &kp F2   &kp F3         &kp F12          &none          &none      &none       &none  &none  &kp RALT
+                            &kp TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &kp ESCAPE
             >;
         };
     };
