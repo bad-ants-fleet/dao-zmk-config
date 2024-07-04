@@ -12,6 +12,7 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
+#define ADJ 3
 
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
@@ -29,10 +30,10 @@
 
         default_layer {
             bindings = <
-  &mt LALT GRAVE   &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J             &kp L      &kp U      &kp Y       &kp SEMICOLON  &lt 2 BACKSLASH
+  &mt LALT GRAVE   &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J             &kp L      &kp U      &kp Y       &kp SEMICOLON  &lt RSE BACKSLASH
   &mt LCTRL MINUS  &kp A  &kp R  &kp S      &kp T          &kp G            &kp M             &kp N      &kp E      &kp I       &kp O          &mt RCTRL SQT
-  &lt 2 EQUAL      &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K             &kp H      &kp COMMA  &kp PERIOD  &kp SLASH      &kp RALT
-                                 &lt 1 TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt 1 ESCAPE
+  &lt RSE EQUAL      &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K             &kp H      &kp COMMA  &kp PERIOD  &kp SLASH      &kp RALT
+                                 &lt LWR TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt LWR ESCAPE
             >;
         };
 
@@ -47,10 +48,18 @@
 
         raise_layer {
             bindings = <
-&none       &bootloader       &none          &none          &none          &none          &none          &none          &none          &none          &bootloader  &none         
- &bt BT_CLR    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3   &bt BT_SEL 2   &bt BT_SEL 1   &bt BT_SEL 0   &bt BT_CLR
- &none        &sys_reset       &none          &none          &none          &none          &none          &none          &none          &none      &sys_reset     &none
-                            &kp TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &kp ESCAPE
+  &kp LALT     &none  &kp F7  &kp F8   &kp F9         &kp F10          &none          &none      &none       &none  &none  &trans
+  &kp LCTRL  &none  &kp F4  &kp F5   &kp F6         &kp F11          &none          &none      &none       &none  &none  &kp RCTRL
+  &trans   &none  &kp F1  &kp F2   &kp F3         &kp F12          &none          &none      &none       &none  &none  &kp RALT
+                            &lt ADJ TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt ADJ ESCAPE
+            >;
+        };
+        adjust_layer {
+            bindings = <
+  &none      &none     &none          &none          &none          &none           &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3     &bt BT_SEL 4   &trans
+  &none      &none     &none          &none          &none          &none           &bt BT_CLR         &bt BT_NXT        &bt BT_PRV        &none          &none            &none
+  &trans      &none     &none          &none          &none          &none           &bt BT_DISC 0      &bt BT_DISC 1     &bt BT_DISC 2      &bt BT_DISC 3     &bt BT_DISC 4 &none
+                            &trans  &none  &none     &none   &none   &trans
             >;
         };
     };
