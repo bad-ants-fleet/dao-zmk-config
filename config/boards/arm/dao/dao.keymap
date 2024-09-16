@@ -32,8 +32,8 @@
             bindings = <
   &mt LALT GRAVE   &kp Q  &kp W  &kp F      &kp P          &kp B            &kp J             &kp L      &kp U      &kp Y       &kp SEMICOLON  &lt RSE BACKSLASH
   &mt LCTRL MINUS  &kp A  &kp R  &kp S      &kp T          &kp G            &kp M             &kp N      &kp E      &kp I       &kp O          &mt RCTRL SQT
-  &lt RSE EQUAL      &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K             &kp H      &kp COMMA  &kp PERIOD  &kp SLASH      &kp RALT
-                                 &lt LWR TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt LWR ESCAPE
+  &lt RSE EQUAL      &kp X  &kp C  &kp D      &kp V          &kp Z            &kp K             &kp H      &kp COMMA  &kp PERIOD  &kp SLASH      &mt RALT ESCAPE
+                                 &lt LWR TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &mo LWR
             >;
         };
 
@@ -51,7 +51,7 @@
   &kp LALT     &none  &kp F7  &kp F8   &kp F9         &kp F10          &none          &none      &none       &none  &none  &trans
   &kp LCTRL  &none  &kp F4  &kp F5   &kp F6         &kp F11          &none          &none      &none       &none  &none  &kp RCTRL
   &trans   &none  &kp F1  &kp F2   &kp F3         &kp F12          &none          &none      &none       &none  &none  &kp RALT
-                            &lt ADJ TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &lt ADJ ESCAPE
+                            &lt ADJ TAB  &kp BACKSPACE  &mt LSHFT RET    &mt RSHFT DEL  &kp SPACE  &mo ADJ
             >;
         };
         adjust_layer {
